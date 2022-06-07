@@ -33,6 +33,13 @@ for (let i = 0; i <= limite; i++) {
 
 
 
+/* let productos = parseInt(prompt("cantidad de productos a comprar"));
+let precio = 0;
+for (let i = 1; i <= productos; i++) {
+    let precioIngresado = parseInt(prompt("Ingresar el precio " + i));
+    precio = precio + precioIngresado;
+}
+console.log(precio); */
 
 
 
