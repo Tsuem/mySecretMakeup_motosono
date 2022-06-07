@@ -1,22 +1,3 @@
-//login
-/* let user = prompt("Ingresa tu usuario. (Shh.. es js)");
-let pass = prompt("Ingresa tu contraseña. (Shh.. es 2022)");
-let username = "js";
-let password = 2022; 
-
-if (user == username && pass == password) {
-   alert("Bienvenido a My Secret Makeup " + usuarioGuardado);
-} else {
-   alert("Usuario o password incorrectos ");
-} */
-
-
-//Calcular costo total de productos seleccionados por el usuario
-
-
-
-
-
 //se escoge entre 2 categorías: skincare o makeup
 let categoría = prompt("Ingresa una de las siguientes categorías: \n 1-Cuidado de la piel(Skincare) \n 2-Maquillaje(Makeup) \n Para salir ingresa SALIR");
 let skincare = prompt("Ingresa una de los siguientes productos: \n 1-Limpiador \n 2-Hidratante \n 3-Mascarilla \n Para salir ingresa SALIR");
@@ -73,6 +54,3 @@ while (categoría != "SALIR") {
       alert("Gracias por su visita. Espero que vuelva pronto");
    }
 }
-
-
-
