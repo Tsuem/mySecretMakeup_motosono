@@ -17,4 +17,4 @@ function productoElegido() {
     }       
 }
 
-console.log(productoElegido());
+productoElegido()
