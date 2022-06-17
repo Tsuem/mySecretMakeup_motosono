@@ -1,0 +1,79 @@
+.title {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 7.5rem;
+    margin: 100px 0px 70px 0px;
+    background: linear-gradient(#FFC2C2, #FFD7A8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #594A41;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.8rem;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+
+.image {
+    position: relative;
+    width: 450px;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+}
+
+.image__text {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__text > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__text:hover {
+    opacity: 1;
+}
+
+.image__text:hover > * {
+    transform: translateY(0);
+}
+
+.image__textTitle {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.image__textDescription {
+    font-size: 1.2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.image__button {
+    margin-top: 1.1em;
+    text-decoration:none;
+}
