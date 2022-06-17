@@ -242,7 +242,7 @@ let precioBuscado = prompt("Ingresa el precio máximo a pagar (el precio mínimo
 let categoria = prompt("Escribe si buscas Maquillaje o Cuidado de la piel")
 let actualizacion = prompt("Ingrese el porcentaje de aumento(número mayor a 1)")
 
-const resultado = productos.filter((el) => el.precio < precioBuscado && el.categoria === categoria)
+const resultado = productos.filter((el) => el.precio <= precioBuscado && el.categoria === categoria)
 console.log(resultado)
 
 const actualizacionPrecio = productos.map((el) => {
