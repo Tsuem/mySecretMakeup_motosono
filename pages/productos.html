@@ -53,21 +53,37 @@
         <div class="navbar-expand-lg navbar-light shadow p-2 mb-5" style="background-color: #F5C6AA;">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/login.html" style="color: #594A41;"><i class="bi bi-person-fill"></i>Crear cuenta</a>
+                    <a class="nav-link" href="../pages/login_and_register.html" style="color: #594A41;"><i class="bi bi-person-circle"></i></i> Crear cuenta</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/login.html" style="color: #594A41;">Iniciar Sesión</a>
+                    <a class="nav-link" href="../pages/login_and_register.html" style="color: #594A41;">Iniciar Sesión</a>
                 </li>
               </ul>
         </div>
     </header>
     
-    <main>
-        <h2 class="text-center mt-5">Productos</h2>
-        <!-- se llama los productos de js -->
-        <div id="productos">
-
+    <main class="container">
+        <h2 class="text-center my-5">Productos</h2>
+        <!-- se muestra todos los productos -->
+        <div id="contenedor-productos">  
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-center h-100 shadow">
+                            <img src="https://cdn.shopify.com/s/files/1/0612/7983/0255/products/41_750x.png?v=1641832827" class="card-img-top" alt="mySecretMakeup producto">
+                            <div class="card-body">
+                                <h5 class="card-title">Clean It Zero Cleansing Balm</h5>
+                                <p class="card-text mb-2">Aceite limpiador facial.</p>
+                                <p class="card-text mb-2">Marca: Banila Co.</p>
+                                <h6 class="card-subtitle mb-2 text-muted">$3000</h6>
+                                <a href="#" class="card__button"><i class="bi bi-plus-circle"></i> AGREGAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  --> 
         </div>
+
 
         <!-- se muestran los filtros -->
         <aside>
@@ -75,33 +91,38 @@
         </aside>
 
         <div class="d-flex justify-content-center my-4">
-            <img class="w-50" src="../img/banner6.jpg" alt="skincareAndMakeup_banner">
+            <img class="w-50" src="../img/banner6.jpg" href="#" alt="skincareAndMakeup_banner">
         </div>
     </main>
 
-    <footer class="text-center text-lg-start mt-5" style="background-color: #F5C6AA;">
-        <div class="container d-flex justify-content-center py-4">
-            <a class="btn btn-primary btn-floating m-2" href="https://www.facebook.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: beige;">
+    <footer class="text-center text-lg-start mt-0" style="background-color: #F5C6AA;">
+        <div class="container d-flex justify-content-center pt-4">
+            <h5 style="color: #fff">Redes sociales</h5>
+        </div>
+        <div class="container d-flex justify-content-center pt-3 pb-5">
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.facebook.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: #fff;">
                 <i class="bi bi-facebook"></i>
             </a>
-            <a class="btn btn-primary btn-floating m-2" href="https://www.youtube.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: beige;">
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.youtube.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: #fff;">
                 <i class="bi bi-youtube"></i>
             </a>
-            <a class="btn btn-primary btn-floating m-2" href="https://www.instagram.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: beige;">
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.instagram.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: #fff;">
                 <i class="bi bi-instagram"></i>
             </a>
-            <a class="btn btn-primary btn-floating m-2" href="https://www.twitter.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: beige;">
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.twitter.com/" target="_blank" role="button" style="background-color: #F8E2CF; border-color: #fff;">
                 <i class="bi bi-twitter"></i>
             </a>
         </div>
 
         <!-- Copyright -->
         <div class="text-center text-white p-2" style="background-color: rgba(0, 0, 0, 0.2);">
-            <h6>&copy; Copyright 2022 My Secret Makeup | Created by Tsue Motosono</h5>
+            <h6>&copy; Copyright 2022 My Secret Makeup | Creado por Tsue Motosono</h5>
         </div>
     </footer>
 
 
+    <script src="../js/stock_productos.js"></script>
+    <script src="../js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

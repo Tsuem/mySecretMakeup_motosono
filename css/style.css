@@ -15,17 +15,18 @@ h2 {
     font-size: 2.8rem;
 }
 
-.tarjetas {
+
+.tarjetas_modelos {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
 }
 
 .image {
     position: relative;
-    width: 450px;
+    width: 500px;
 }
 
 .image__img {
@@ -75,40 +76,111 @@ h2 {
 
 
 .image__button {
-  background: #FCD8D4; /* color de fondo */
-  color: #fff; /* color de fuente */
-  padding: 10px 15px;
-  border-radius: 15px; /* redondear bordes */
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  display: inline-block;
-  text-decoration: none;
-  margin-top: 10px;
+    background: #FCD8D4; /* color de fondo */
+    color: #fff; /* color de fuente */
+    padding: 10px 15px;
+    border-radius: 15px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
 }
 .image__button:hover {
-  color: #fff; /* color de fuente hover */
+    color: #fff; /* color de fuente hover */
 }
 .image__button::after {
-  content: "";
-  background: #F5C6AA; /* color de fondo hover */
-  position: absolute;
-  z-index: -1;
-  padding: 16px 20px;
-  display: block;
-  top: 100%;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+    content: "";
+    background: #F5C6AA; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 100%;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
 }
 
 .image__button:hover::after {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.card__button {
+    background: #FCD8D4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px; 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.card__button:hover {
+    color: #fff;
+}
+
+.card__button::after {
+    content: "";
+    background: #F5C6AA;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+  
+.card__button:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+
+.carrito_de_compras {
+    color: #594A41;
+}
+
+#bienvenida {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.9rem;
+    display: inline-block;
+    position: relative;
+    color: #594A41;
+}
+
+#bienvenida::after, #bienvenida::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.7em;
+}
+
+#bienvenida::before {
+    left: -140px;
+}
+
+#bienvenida::after {
+    right: -140px;
 }
