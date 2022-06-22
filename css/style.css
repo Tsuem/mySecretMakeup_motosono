@@ -1,4 +1,4 @@
-.title {
+.title-index {
     font-family: 'Great Vibes', cursive; 
     font-size: 7.5rem;
     margin: 100px 0px 70px 0px;
@@ -15,18 +15,34 @@ h2 {
     font-size: 2.8rem;
 }
 
+#categoria {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.8rem;
+    display: inline-block;
+    position: relative;
+    color: #594A41;
+}
 
-.tarjetas_modelos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+#categoria::after, #categoria::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.7em;
+}
+
+#categoria::before {
+    left: -140px;
+}
+
+#categoria::after {
+    right: -140px;
 }
 
 .image {
     position: relative;
-    width: 500px;
+    width: 510px;
 }
 
 .image__img {
@@ -40,7 +56,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -168,19 +184,159 @@ h2 {
     color: #594A41;
 }
 
-#bienvenida::after, #bienvenida::before{
-    content: '';
+.card {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 20px #fcd8d4(0, 0, 0, 0.75);
+}
+
+.card:hover{
+    box-shadow: 0px 0px 25px 6px #FCD8D4;
+}
+
+
+
+/* ***** formulario de login y signup ***** */
+#formulario {
+    margin-bottom: 50px;
+    display: grid;
+    height: 90vh;
+    width: 100%;
+    place-items: center;
+    color: #594A41;
+    background: #f2f2f2;
+    /* background: -webkit-linear-gradient(left, #f68989, #fcd8d4e0); */
+}
+
+.wrapper {
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title-text .title {
+    width: 50%;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.slide-controls .slide-tab {
     position: absolute;
-    width: 120px;
-    height: 3px;
-    background-color: currentColor;
-    top: 0.7em;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: -webkit-linear-gradient(left, #f68989, #fcd8d4e0);
 }
 
-#bienvenida::before {
-    left: -140px;
+input[type="radio"]{
+    display: none;
 }
 
-#bienvenida::after {
-    right: -140px;
+#signup:checked ~ .slide-tab {
+    left: 50%;
+}
+
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+
+}
+
+.form-container .form-inner form{
+    width: 50%;
+}
+
+.form-inner form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-inner form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #FCD8D4;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+
+.form-inner form .field input:focus{
+    border-color: #F68989;
+}
+
+.form-inner form .pass-link {
+    margin-top: 5px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+    color: #F68989;
+    text-decoration: none;
+}
+
+.form-inner form .signup-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+    text-decoration: underline;
+
+}
+
+form .field input[type="submit"]{
+    background: -webkit-linear-gradient(left, #F68989, #FCD8D4);
+    color: #594A41;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-left: 0px;
+    border: none;
+    cursor: pointer;
 }

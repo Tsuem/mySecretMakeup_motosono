@@ -1,4 +1,4 @@
-const productos = [
+const productosArray = [
     {
         id: 1, 
         nombre: "Clean It Zero Cleansing Balm", 
@@ -7,7 +7,7 @@ const productos = [
         stock: 5, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Limpiador Facial", 
-        tipo: "Aceite Limpiador Facial", 
+        descripcion: "Aceite Limpiador Facial", 
         imagen: "https://cdn.shopify.com/s/files/1/0612/7983/0255/products/41_750x.png?v=1641832827"
     },
     {
@@ -18,7 +18,7 @@ const productos = [
         stock: 6, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Limpiador Facial", 
-        tipo: "Aceite Limpiador Facial", 
+        descripcion: "Aceite Limpiador Facial", 
         imagen: "https://bellekr.com/wp-content/uploads/2021/04/Rice-Water-Bright-Rich-Cleansing-Oil-BELLE.jpg"
     },
     {
@@ -29,7 +29,7 @@ const productos = [
         stock: 8, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Limpiador Facial", 
-        tipo: "Espumas de Limpieza", 
+        descripcion: "Espumas de Limpieza", 
         imagen: "https://cf.shopee.ph/file/39a10b31b6907917412a9067ec77d81d"
     },
     {
@@ -40,7 +40,7 @@ const productos = [
         stock: 4,
         categoria: "Cuidado de la Piel", 
         subcategoria: "Limpiador Facial", 
-        tipo: "Espumas de Limpieza", 
+        descripcion: "Espumas de Limpieza", 
         imagen: "https://cdn.shopify.com/s/files/1/0221/2433/1104/products/78855259_2944763665534335_7748994082935930880_n_520x.progressive.jpg?v=1631369589"
     },
     {
@@ -51,7 +51,7 @@ const productos = [
         stock: 11, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Hidratante",
-        tipo: "Hidratante", 
+        descripcion: "Hidratante", 
         imagen: "https://cdn.shopify.com/s/files/1/0254/3022/9055/products/MizonAllInOneSnailRepairCreamkoreanskincarenetherlands4_80ba2f29-c6b5-43cf-ad26-12297909621c.jpg?v=1599033039"
     },
     {
@@ -62,7 +62,7 @@ const productos = [
         stock: 7, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Hidratante", 
-        tipo: "Hidratante",
+        descripcion: "Hidratante",
         imagen: "https://kbeauty.com.bd/wp-content/uploads/2021/07/cosrx-hyaluronic-acid-cream-600x600.jpg"
     },
     {
@@ -73,7 +73,7 @@ const productos = [
         stock: 2, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Mascarillas de Tela", 
-        tipo: "Mascarillas de Tela",
+        descripcion: "Mascarillas de Tela",
         imagen: "https://img.joomcdn.net/baebda8a02269562a1a4f3e3bab0f46c558220be_original.jpeg"
     },
     {
@@ -84,7 +84,7 @@ const productos = [
         stock: 6, 
         categoria: "Cuidado de la Piel", 
         subcategoria: "Mascarillas de Tela", 
-        tipo: "Mascarillas de Tela",
+        descripcion: "Mascarillas de Tela",
         imagen: "https://ae01.alicdn.com/kf/H85a8f9eba194476a818e10d90a4848a3Y/MIZON-Joyful-Time-Essence-Mask-23g-cuidado-Facial-planta-Natural-m-scara-Facial-hoja-hidratante-calmante.jpg_Q90.jpg_.webp"
     },
     {
@@ -95,7 +95,7 @@ const productos = [
         stock: 6, 
         categoria: "Maquillaje", 
         subcategoria: "Labios",
-        tipo: "Labial", 
+        descripcion: "Labial", 
         imagen: "https://www.etude.com/int/en/media/catalog/product/cache/07b96aa9f5b70f577958b488444f8dd2/d/e/dear-darling-water-gel-tint-01.jpg"
     },
     {
@@ -106,7 +106,7 @@ const productos = [
         stock: 7, 
         categoria: "Maquillaje", 
         subcategoria: "Labios", 
-        tipo: "Labial", 
+        descripcion: "Labial", 
         imagen: "https://img.joomcdn.net/c373779737f6d0cbd0e518c669d13688823072aa_original.jpeg"
     },
     {
@@ -117,7 +117,7 @@ const productos = [
         stock: 3, 
         categoria: "Maquillaje", 
         subcategoria: "Ojos", 
-        tipo: "Delineadores", 
+        descripcion: "Delineadores", 
         imagen: "https://www.kmarket.com.bd/wp-content/uploads/2020/08/CLIO-WATERPROOF-PEN-LINER-KILL-BLACK-BROWN-0.55ML.jpg"
     },
     {
@@ -128,7 +128,7 @@ const productos = [
         stock: 10, 
         categoria: "Maquillaje", 
         subcategoria: "Ojos", 
-        tipo: "Delineadores", 
+        descripcion: "Delineadores", 
         imagen: "https://www.etude.com/int/en/media/catalog/product/cache/07b96aa9f5b70f577958b488444f8dd2/1/0/102002110_01_540_540.jpg"
     },
     {
@@ -139,7 +139,7 @@ const productos = [
         stock: 5, 
         categoria: "Maquillaje", 
         subcategoria: "Ojos", 
-        tipo: "Paleta de Sombras", 
+        descripcion: "Paleta de Sombras", 
         imagen: "https://cdn.shopify.com/s/files/1/0060/0539/1458/products/product_119_1024x1024_f701eddf-44ca-4ef7-bb79-85fe20ccec76_1200x1200.png?v=1616960009"
     },
     {
@@ -150,7 +150,7 @@ const productos = [
         stock: 8, 
         categoria: "Maquillaje", 
         subcategoria: "Ojos", 
-        tipo: "Paleta de Sombras", 
+        descripcion: "Paleta de Sombras", 
         imagen: "https://cdn.shopify.com/s/files/1/0534/2337/4503/products/54e8a14c96614b47b0f54355d51da6f7_101f0eef-dd8f-45b9-8bab-63f795e33096_1200x.jpg?v=1625709769"
     },
     {
@@ -161,7 +161,7 @@ const productos = [
         stock: 8, 
         categoria: "Maquillaje", 
         subcategoria: "Ojos", 
-        tipo: "Máscara de Pestañas", 
+        descripcion: "Máscara de Pestañas", 
         imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/225/266/products/2cdd0f5fc27c766ec5722129f84c42c31-77a9097fc9ffe764e915947642293156-1024-1024.jpeg"
     },
     {
@@ -172,7 +172,7 @@ const productos = [
         stock: 9, 
         categoria: "Maquillaje", 
         subcategoria: "Ojos", 
-        tipo: "Máscara de Pestañas", 
+        descripcion: "Máscara de Pestañas", 
         imagen: "https://www.etude.com/int/en/media/catalog/product/cache/07b96aa9f5b70f577958b488444f8dd2/1/0/101002079_02_540_540.jpg"
     },
     {
@@ -183,7 +183,7 @@ const productos = [
         stock: 12, 
         categoria: "Maquillaje", 
         subcategoria: "Rostro", 
-        tipo: "BB cream", 
+        descripcion: "BB cream", 
         imagen: "https://m.media-amazon.com/images/I/517YcrEeonL._SL1000_.jpg"
     },
     {
@@ -194,7 +194,7 @@ const productos = [
         stock: 2, 
         categoria: "Maquillaje", 
         subcategoria: "Rostro", 
-        tipo: "BB cream", 
+        descripcion: "BB cream", 
         imagen: "https://img.joomcdn.net/22b8b16208e05cb0a74726e4c8f4171a3fd814a2_original.jpeg"
     },
     {
@@ -205,7 +205,7 @@ const productos = [
         stock: 9, 
         categoria: "Maquillaje", 
         subcategoria: "Rostro", 
-        tipo: "Polvos traslúcidos", 
+        descripcion: "Polvos traslúcidos", 
         imagen: "https://i0.wp.com/seouloftokyo.co.za/wp-content/uploads/2019/12/Innisfree-No-Sebum-Mineral-Powder.jpg?fit=800%2C800&ssl=1"
     },
     {
@@ -216,7 +216,7 @@ const productos = [
         stock: 5, 
         categoria: "Maquillaje", 
         subcategoria: "Rostro", 
-        tipo: "Polvos traslúcidos", 
+        descripcion: "Polvos traslúcidos", 
         imagen: "https://file.hstatic.net/1000373761/file/b546bae9f39e0bc0528f_331f7579fa164450886892a61590b11c_grande.jpg"
     },
     {
@@ -227,7 +227,7 @@ const productos = [
         stock: 3, 
         categoria: "Maquillaje", 
         subcategoria: "Rostro", 
-        tipo: "Cushion", 
+        descripcion: "Cushion", 
         imagen: "https://linkstore.vn/wp-content/uploads/2020/01/Phan-nuoc-Clio-Kill-Cover-Glow-Cushion-1.jpg"
     },
     {
@@ -238,7 +238,7 @@ const productos = [
         stock: 10, 
         categoria: "Maquillaje", 
         subcategoria: "Rostro", 
-        tipo: "Cushion", 
+        descripcion: "Cushion", 
         imagen: "https://cf.shopee.vn/file/f0ffd3eb94f385e050e338b6b72ba4e9"
     }
 ]

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Secret Makeup</title>
+    <link rel="icon" href="../img/icon.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Estilos propios CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: #FDF6F0;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html" style="color: #594A41;">
+                    <i class="bi bi-arrow-left-circle-fill"> Volver al inicio</i>
+                </a>
+    </header>
+
+    <main id="formulario">
+        <!-- formulario de login y signup -->
+        <div class="wrapper">
+            <div class="title-text">
+                <div class="title login"> Iniciar Sesión</div>
+                <div class="title signup">Registrarse</div>
+            </div>
+            <div class="form-container">
+                <div class="slide-controls">
+                    <input type="radio" name="slider" id="login" checked>
+                    <input type="radio" name="slider" id="signup">
+                    <label for="login" class="slide login">Iniciar Sesión</label>
+                    <label for="signup" class="slide signup">Registrarse</label>
+                    <div class="slide-tab"></div>
+                </div>
+                <div class="form-inner">
+                    <form action="#" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="E-mail" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Contraseña" required>
+                        </div>
+                        <div class="pass-link"><a href="#">¿Te olvidaste la contraseña?</a></div>
+                        <div class="field">
+                            <input type="submit" value="Iniciar sesión">
+                        </div>
+                        <div class="signup-link">¿No eres usuario? <a href="#">Registrate ahora</a></div>
+                    </form>
+                    <form action="#" class="signup">
+                        <div class="field">
+                            <input type="text" placeholder="E-mail" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Contraseña" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Confirme su contraseña" required>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Crear cuenta">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <!-- banner -->
+    <section class="container my-3">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/discount1.png" class="d-block w-100" alt="mySecretMakeup_banner1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/discount2.gif" class="d-block w-100" alt="mySecretMakeup_banner2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/discount3_comp.png" class="d-block w-100" alt="mySecretMakeup_banner3">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/discount4_comp.png" class="d-block w-100" alt="mySecretMakeup_banner3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+
+
+    <footer class="text-center text-lg-start mt-0" style="background-color: #FDF6F0;">
+        <div class="container d-flex justify-content-center pt-4">
+            <h5 style="color: #594a41c5">Redes sociales</h5>
+        </div>
+        <div class="container d-flex justify-content-center pt-3 pb-5">
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.facebook.com/" target="_blank" role="button" style="background-color: #594a41d7; border-color: #fff;">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.youtube.com/" target="_blank" role="button" style="background-color: #594a41d7; border-color: #fff;">
+                <i class="bi bi-youtube"></i>
+            </a>
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.instagram.com/" target="_blank" role="button" style="background-color: #594a41d7; border-color: #fff;">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a class="btn btn-primary btn-floating mx-2" href="https://www.twitter.com/" target="_blank" role="button" style="background-color: #594a41d7; border-color: #fff;">
+                <i class="bi bi-twitter"></i>
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-white p-2" style="background-color: rgba(0, 0, 0, 0.274);">
+            <h6>&copy; Copyright 2022 My Secret Makeup | Creado por Tsue Motosono</h5>
+        </div>
+    </footer>
+
+
+    
+    <script src="js/login.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

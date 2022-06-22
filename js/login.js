@@ -20,4 +20,4 @@ const saludo = document.getElementById('bienvenida')
 
 let nombre = prompt("Ingresa tu nombre")
 
-saludo.innerText=('Bienvenido a My Secret Makeup ' + nombre )
+saludo.innerText=('Bienvenid@ a My Secret Makeup, ' + nombre.toUpperCase())
