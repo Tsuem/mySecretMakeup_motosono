@@ -205,7 +205,7 @@ h2 {
     place-items: center;
     color: #594A41;
     background: #f2f2f2;
-    /* background: -webkit-linear-gradient(left, #f68989, #fcd8d4e0); */
+    background: -webkit-linear-gradient(left, #f68989, #fcd8d4e0);
 }
 
 .wrapper {
@@ -227,6 +227,7 @@ h2 {
     font-size: 2.2rem;
     font-weight: 600;
     text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .wrapper .form-container {
@@ -286,6 +287,7 @@ input[type="radio"]{
 
 .form-container .form-inner form{
     width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .form-inner form .field {
