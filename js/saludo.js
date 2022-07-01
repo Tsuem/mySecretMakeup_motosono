@@ -16,8 +16,8 @@ if (user == username && pass == password) {
 } */
 
 
-const saludo = document.getElementById('bienvenida')
+/* const saludo = document.getElementById('bienvenida')
 
 let nombre = prompt("Ingresa tu nombre")
 
-saludo.innerText=('Bienvenid@ a My Secret Makeup, ' + nombre.toUpperCase())
+saludo.innerText=('Bienvenid@ a My Secret Makeup, ' + nombre.toUpperCase()) */

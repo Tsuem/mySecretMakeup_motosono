@@ -6,7 +6,7 @@ function mostrarProductos(currArray){
 
     document.getElementById("contenedor-productos").innerText = "";
 
-    for(var i = 0 ; i < currArray.length; i++){
+    for(let i = 0 ; i < currArray.length; i++){
         document.getElementById("contenedor-productos").innerHTML += `
             <div class="col-md-6 col-lg-4 my-4">
                 <div class="card text-center h-100">
@@ -31,6 +31,7 @@ function mostrarProductos(currArray){
 document.getElementById("myInput").addEventListener("keyup",function(){
     let text = document.getElementById("myInput").value;
 
+    /* convierte en mayuscula la primera letra de la palabra buscada */
     const str2 = text.charAt(0).toUpperCase() + text.slice(1);
 
     filterArray = productosArray.filter(function(a){

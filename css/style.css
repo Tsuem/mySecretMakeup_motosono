@@ -92,7 +92,7 @@ h2 {
 
 
 .image__button {
-    background: #FCD8D4; /* color de fondo */
+    background: #f8d1cc; /* color de fondo */
     color: #fff; /* color de fuente */
     padding: 10px 15px;
     border-radius: 15px; /* redondear bordes */
@@ -108,7 +108,7 @@ h2 {
 }
 .image__button::after {
     content: "";
-    background: #F5C6AA; /* color de fondo hover */
+    background: #f5c1a3; /* color de fondo hover */
     position: absolute;
     z-index: -1;
     padding: 16px 20px;
