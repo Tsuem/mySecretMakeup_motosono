@@ -1,3 +1,4 @@
+//animaciones del login y signup
 const loginForm = document.querySelector("form.login");
 const signupForm = document.querySelector("form.signup");
 const loginBtn = document.querySelector("label.login");
@@ -23,24 +24,22 @@ signupLink.onclick = (() =>{
 
 
 
-
 //signup
 function signup(e){
     event.preventDefault();  
 
     const correo = document.getElementById('correo').value;
-    const contrasenha = document.getElementById('contrasenha').value;
+    const contraseña = document.getElementById('contraseña').value;
 
-    const user = {
+    const newuser = {
         correo: correo,
-        contrasenha: contrasenha,
+        contraseña: contraseña,
     };
 
-    const json = JSON.stringify(user);
+    const json = JSON.stringify(newuser);
     localStorage.setItem(correo, json);
     console.log('usuario añadido');
 } 
-
 
 
 
@@ -50,25 +49,30 @@ function loginFunc(e){
 
     const email = document.getElementById('email').value;
     const pass = document.getElementById('password').value;
-    const result = document.getElementById('result');
 
     const user = localStorage.getItem(email);
-    const data = JSON.parse(user);
-    console.log(data);
+    const datauser = JSON.parse(user);
 
-    if(user == null || pass == null){
+    if(datauser == null){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Algo anda mal!',
             footer: '<a href="">¿No tienes una cuenta?</a>'
-          })
-    } else {
+        })
+    } else if(email == datauser.correo && pass == datauser.contraseña){
         Swal.fire({
             icon: 'success',
             title: 'Bienvenido a My Secret Makeup',
             showConfirmButton: false,
-            timer: 1900
-          })
+            timer: 2000
+        })
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo anda mal!',
+            footer: '<a href="">¿No tienes una cuenta?</a>'
+        })
     }
 }
