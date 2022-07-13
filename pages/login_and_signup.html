@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: #FDF6F0;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html" style="color: #594A41;">
-                    <i class="bi bi-arrow-left-circle-fill"> Volver al inicio</i>
+                    <i class="bi bi-arrow-left-circle-fill"> Volver al Inicio</i>
                 </a>
     </header>
 
@@ -43,9 +43,9 @@
                     <div class="slide-tab"></div>
                 </div>
                 <div class="form-inner">
-                    <form onsubmit="loginFunc()" action="#" class="login">
+                    <form onsubmit="loginFunc()" action="#" class="login" id="login">
                         <div class="field">
-                            <input type="text" placeholder="E-mail" id="email" required>
+                            <input type="text" placeholder="Nombre de usuario" id="username" required>
                         </div>
                         <div class="field">
                             <input type="password" placeholder="Contraseña" id="password" required>
@@ -56,15 +56,15 @@
                         </div>
                         <div class="signup-link">¿No eres usuario? <a href="#">Registrate ahora</a></div>
                     </form>
-                    <form  onsubmit="signup()" class="signup">
+                    <form  onsubmit="signup()" class="signup" id="signup">
                         <div class="field">
                             <input type="text" placeholder="E-mail" id="correo" required>
                         </div>
                         <div class="field">
-                            <input type="password" placeholder="Contraseña" id="contraseña" required>
+                            <input type="text" placeholder="Nombre de usuario" id="usuario" required>
                         </div>
                         <div class="field">
-                            <input type="password" placeholder="Confirme su contraseña" required>
+                            <input type="password" placeholder="Contraseña" id="contraseña" required>
                         </div>
                         <div class="field">
                             <input type="submit" value="Crear cuenta">

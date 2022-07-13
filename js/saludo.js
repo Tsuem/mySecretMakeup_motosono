@@ -14,10 +14,3 @@ if (user == username && pass == password) {
 } else {
    console.log("Usuario o password incorrectos ");
 } */
-
-
-/* const saludo = document.getElementById('bienvenida')
-
-let nombre = prompt("Ingresa tu nombre")
-
-saludo.innerText=('Bienvenid@ a My Secret Makeup, ' + nombre.toUpperCase()) */
