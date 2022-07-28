@@ -1,65 +1,180 @@
-/* // mostrar los productos del carrito en la página de pago
-function mostrarCarritoPago(productoAgregar) {
-    let div = document.createElement('div')
-    div.classList.add('card mb-3')
-    div.innerHTML = `<div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-row align-items-center">
-                                <div>
-                                    <img src="https://cdn.shopify.com/s/files/1/0612/7983/0255/products/41_750x.png?v=1641832827" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                </div>
-                                <div class="ms-3">
-                                    <h5>${productoAgregar.nombre}</h5>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center">
-                                <div style="width: 50px;">
-                                    <h5 class="fw-normal mb-0">${contadorCarrito.innerText}</h5>
-                                </div>
-                                <div style="width: 80px;">
-                                    <h5 class="mb-0">${precioTotal.innerText}</h5>
-                                </div>
-                                <a href="#!" style="color: #594A41;"><i class="fas fa-trash-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>`
+const precioSubtotalPago = document.getElementById('precioSubtotalPago');
+const precioTotalPago = document.getElementById('precioTotalPago');
+const contenedorCarritoPago = document.getElementById('carrito-contenedor-pago');
+const enviarComprobante = document.getElementById('enviarComprobante')
 
-    contenedorCarritoPago.appendChild(div)
-} */
+//TEST
+const typeName = document.getElementById('typeName');
+const typeCard = document.getElementById('typeCard');
+const typeExp = document.getElementById('typeExp');
+const typeCode = document.getElementById('typeCode');
+let subTotal = 0
+let total = 0
 
+window.addEventListener('DOMContentLoaded', () => {
+    if (contenedorCarritoPago) {
+        calcularTotales()
+        mostrarCarrito()
+        usuarioActivo()
+    }
+})
 
+const usuarioActivo = () => {
+    const user = localStorage.getItem("activo");
+    const datauser = JSON.parse(user);
+    if (datauser) {
+        lognav.innerHTML = `<ul class="nav justify-content-center mt-3" id="sesion">
+                                <li class="nav-item">
+                                    <p style="color: #594A41;">Bienvenid@ ${datauser.usuario} ! </p>
+                                </li>
+                                <li class="nav-item">
+                                    <button onClick="cerrarSesion()" class="ms-3" id="cerrarSesion" style="color: #594A41;">Cerrar Sesión <i class="bi bi-door-open-fill"></i></button>
+                                </li>
+                            </ul>`
+    } else {
+        lognav.innerHTML = `<ul class="nav justify-content-center" id="sesion">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./login_and_signup.html" style="color: #594A41;"><i class="bi bi-person-circle"></i> Iniciar Sesión</a>
+                                </li>
+                            </ul>`
+    }
+}
 
+const calcularTotales = () => {
+    for (let index = 0; index < localStorage.length; index++){
+        if (!isNaN(parseInt(localStorage.key(index)))) {
+            const element = localStorage.key(index)
+            const product = JSON.parse(localStorage.getItem(element))
+            subTotal += product.precio
+        }
+    }
+    total = 890 + subTotal
+    precioSubtotalPago.innerText = subTotal
+    precioTotalPago.innerText = total
+}
 
+const mostrarCarrito = () => {
+    for (let index = 0; index < localStorage.length; index++){
+        if (!isNaN(parseInt(localStorage.key(index)))) {
+            const element = localStorage.key(index)
+            const product = JSON.parse(localStorage.getItem(element))
+            const { nombre, imagen, descripcion, marca, precio, cantidad } = product
+            contenedorCarritoPago.innerHTML += `<div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img src="${imagen}" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                        </div>
+                                                        <div class="ms-3">
+                                                            <h5>${nombre}</h5>
+                                                            <p class="small mb-0">${descripcion}. Marca: ${marca}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div style="width: 70px;">
+                                                            <p class="fw-normal mb-0">Cant.: ${cantidad}</p>
+                                                        </div>
+                                                        <div style="width: 70px;">
+                                                            <h5 class="mb-0">$${precio}</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>`
+        } 
+    }
+}
 
-/* // actualizar el carrito pago
-function actualizarCarritoPago(){
-    precioSubtotalPago.innerText = carritoDeCompras.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
-} */
+if (enviarComprobante) {
+    enviarComprobante.addEventListener('click', (e) => enviarEmailCompra(e))
+}
 
-
-/* contenedorProductos.innerHTML = "";
-
-    for(const product of products) {
-        let div = document.createElement('div')
-        div.className = 'col-md-6 col-lg-4 my-4'
-        div.innerHTML = `
-                            <div class="card text-center h-100">
-                                <img src="${product.imagen}" class="card-img-top" alt="mySecretMakeup producto">
-                                <div class="card-body">
-                                    <h5 class="card-title">${product.nombre}</h5>
-                                    <p class="card-text mt-2">Descripción: ${product.descripcion}</p>
-                                    <p class="card-text">Marca: ${product.marca}</p>
-                                    <h6 class="card-subtitle text-muted">$ ${product.precio}</h6>
-                                    <a id="boton${product.id}" class="card__button fw-bold"><i class="bi bi-plus-circle"></i> AGREGAR</a>
-                                </div>
-                            </div>
-                        `
-
-        contenedorProductos.appendChild(div)
-
-        let btnAgregar = document.getElementById(`boton${product.id}`)
-
-        btnAgregar.addEventListener('click', () => {
-            agregarAlCarrito(product.id);
+function enviarEmailCompra(e){
+    if (subTotal > 0) {
+        if (localStorage.getItem("activo")) {
+            e.preventDefault()
+            const valid = validarFormulario(typeName.value, typeCard.value, typeExp.value, typeCode.value)
+            if (valid) {
+                const usuarioActivo = localStorage.getItem("activo");
+                const datausuario = JSON.parse(usuarioActivo);
+                emailjs.init('X3M-jA1mwOa5Vqo9k')
+                emailjs.send("service_gkhbj94", "template_l8ns0yc", {
+                    nombre: `${datausuario.usuario}`,
+                    message: `${contenedorCarritoPago.innerHTML}`,
+                    total: `${total}`,
+                    to_name: `${datausuario.email}`,
+                    from_name: "My Secret Makeup",
+                })
+                .then(function() {
+                    for (let index = 0; index < localStorage.length; index++){
+                        if (!isNaN(parseInt(localStorage.key(index)))) {
+                            const element = localStorage.key(index)
+                            localStorage.removeItem(element);
+                        }
+                    }
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Compra exitosa!',
+                        showCancelButton: true,
+                        cancelButtonColor: '#3085d6',
+                        cancelButtonText: '<a href="../index.html" style="text-decoration: none; color: white">Ir al inicio</a>',
+                        confirmButtonText: '<a href="../pages/productos.html" style="text-decoration: none; color: white">Ver más productos</a>',
+                        footer: '<p>Revisá la casilla de tu E-mail!</p>',
+                    })
+                }, function(error) {
+                    console.log('HA FALLADO...', error);
+                });
+            }
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Inicie sesión antes de hacer el pago', 
+            })
+        }
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Agregue al menos un Producto al Carrito', 
         })
-    } */
+    }
+}
+
+const validarFormulario = (typeName, typeCard, typeExp, typeCode) => {
+    if (typeName.trim() != "") {
+        if (typeCard.trim().length == 16) {
+            if (typeExp.trim() != "") {
+                if (typeCode.trim().length == 3) {
+                    return true
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Ingrese el Código de Seguridad de la Tarjeta', 
+                    })
+                }
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Fecha de Expiración Inválida', 
+                })
+                return false
+            }
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Número de Tarjeta Inválido', 
+            })
+            return false
+        }
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Ingrese el Nombre del Titular de la Tarjeta', 
+        })
+        return false
+    }
+}

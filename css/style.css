@@ -40,6 +40,10 @@ h2 {
     right: -140px;
 }
 
+.redesSociales {
+    font-family: 'DM Serif Display', serif;
+}
+
 .image {
     position: relative;
     width: 510px;
@@ -177,17 +181,6 @@ h2 {
 }
 
 
-.card {
-    transition: all 0.5s ease;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 20px #fcd8d4(0, 0, 0, 0.75);
-}
-
-.card:hover{
-    box-shadow: 0px 0px 25px 6px #FCD8D4;
-}
-
-
 
 /* ***** formulario de login y signup ***** */
 #formulario {
@@ -267,6 +260,7 @@ input[type="radio"]{
     display: none;
 }
 
+
 #signup:checked ~ .slide-tab {
     left: 50%;
 }
@@ -301,7 +295,39 @@ input[type="radio"]{
     transition: all 0.4s ease;
 }
 
+#enviarEmail{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #FCD8D4;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+
+#iniciarSesion {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #FCD8D4;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+
 .form-inner form .field input:focus{
+    border-color: #F68989;
+}
+
+#enviarEmail:focus {
+    border-color: #F68989;
+}
+
+#iniciarSesion:focus {
     border-color: #F68989;
 }
 
@@ -336,10 +362,30 @@ form .field input[type="submit"]{
     cursor: pointer;
 }
 
+#enviarEmail[type="submit"]{
+    background: -webkit-linear-gradient(left, #F68989, #FCD8D4);
+    color: #594A41;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-left: 0px;
+    border: none;
+    cursor: pointer;
+}
+
+#iniciarSesion[type="submit"]{
+    background: -webkit-linear-gradient(left, #F68989, #FCD8D4);
+    color: #594A41;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-left: 0px;
+    border: none;
+    cursor: pointer;
+}
+
 /* boton carrito */
 #boton-carrito {
     display: flex;
-    border: none;
+    border: 3px solid #594A41;
     color: #594A41;
     background-color: #f8eee4ea;;
     font-size: 40px;
@@ -352,8 +398,18 @@ form .field input[type="submit"]{
     cursor: pointer;
     color: white;
     background-color: #F5C6AA;
+    border: 3px solid white;
 }
 
 #boton-carrito:focus {
     outline: none;
+}
+
+#btnAgregar {
+    cursor: pointer;
+}
+
+#cerrarSesion {
+    border: none;
+    background-color: transparent;
 }
